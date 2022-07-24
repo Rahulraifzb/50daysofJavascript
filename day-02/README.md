@@ -21,3 +21,6 @@
     console.log(`Reversed string is: ${reverseAString(str)}`)
 
 ```
+
+[Resourse-1](https://www.geeksforgeeks.org/reverse-a-string-in-javascript/)
+[Resourse-2](https://www.programiz.com/javascript/examples/reverse-string)
