@@ -12,7 +12,7 @@
 - [ ] convertTo24HrsFormat("11:8 PM") returns "23:08"
 - [ ] convertTo24HrsFormat("10:02 PM") returns "22:02"
 
-```
+```js
     const time = '12:10 AM';
 
     function convertTo24HrsFormat(time){
