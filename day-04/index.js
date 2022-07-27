@@ -45,7 +45,8 @@ function convertTo24HrsFormat3(timeTo24){
     return `${hours}:${minutes}`;
 }
 
-function convertTo24HrsFormat(timeTo24){
+// Method 4
+function convertTo24HrsFormat4(timeTo24){
     if(!(timeTo24.endsWith("am") || timeTo24.endsWith("pm") || timeTo24.endsWith("AM") || timeTo24.endsWith("PM"))) return "Time isn't valid!";
 
     let time = timeTo24.slice(0,timeTo24.length - 2);
@@ -58,6 +59,24 @@ function convertTo24HrsFormat(timeTo24){
     if(minutes.length === 1) minutes = "0" + minutes;
 
     return `${hours}:${minutes}`;
+}
+
+// Method 5
+function convertTo24HrsFormat(timeText){
+    const timeTextLower = timeText.toLowerCase();
+    const size = timeTextLower.length;
+
+    let modifier = timeTextLower.slice(size - 2)
+    let time = timeTextLower.slice(0,size - 2);
+    let [hours,minutes] = time.split(":");
+
+    if(modifier === "am"){
+        hours = hours == 12 ? "0" : hours;
+    }else if(modifier === 'pm'){
+        hours = hours == 12 ? hours : String(+hours + 12);
+    }
+    
+    return `${hours.padStart(2,0)}:${minutes.padStart(2,0)}`;
 }
 
 
