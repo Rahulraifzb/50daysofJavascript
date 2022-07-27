@@ -1,4 +1,4 @@
-const time = "05:00 PM";
+const time = "5:00pm";
 const time_02 = '11:10 PM';
 
 // Method 1
@@ -45,5 +45,20 @@ function convertTo24HrsFormat3(timeTo24){
     return `${hours}:${minutes}`;
 }
 
+function convertTo24HrsFormat(timeTo24){
+    if(!(timeTo24.endsWith("am") || timeTo24.endsWith("pm") || timeTo24.endsWith("AM") || timeTo24.endsWith("PM"))) return "Time isn't valid!";
 
-console.log(`Converted time: ${convertTo24HrsFormat2(time)}`)
+    let time = timeTo24.slice(0,timeTo24.length - 2);
+    const modifier = timeTo24.slice(timeTo24.length - 2);
+    let [hours,minutes] = time.split(":");
+
+    if(hours === '12') hours = '00';
+    if(modifier === 'PM' || modifier === 'pm') hours = parseInt(hours,10) + 12;
+    if(hours.length === 1) hours = "0" + hours;
+    if(minutes.length === 1) minutes = "0" + minutes;
+
+    return `${hours}:${minutes}`;
+}
+
+
+console.log(`Converted time: ${convertTo24HrsFormat(time)}`)
