@@ -12,6 +12,7 @@ Solutions to 50 Days of Javascript! by [Codedamn](https://codedamn.com/)
 4. Write a function which can convert the time input given in 12 hours format to 24 hours format.
 5. Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'.
 6. Write a function to truncate a string to a certain number of words.
+7. Create a regular expression to validate if the given input is valid Indian mobile number or not
 
 
 
