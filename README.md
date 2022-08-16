@@ -13,6 +13,7 @@ Solutions to 50 Days of Javascript! by [Codedamn](https://codedamn.com/)
 5. Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'.
 6. Write a function to truncate a string to a certain number of words.
 7. Create a regular expression to validate if the given input is valid Indian mobile number or not
+8. Write a function which accepts two valid dates and returns the difference between them as number of days.
 
 
 
