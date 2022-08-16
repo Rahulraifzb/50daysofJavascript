@@ -7,3 +7,15 @@
 - [ ] getDaysBetweenDates('11/10/2022','11/12/2022') returns 2
 - [ ] getDaysBetweenDates('11/01/2020', '11/05/2020') returns 4
 
+```js
+  const DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24;
+
+  function getDaysBetweenDates(dateText1, dateText2) {
+      // write your solution here
+
+      return
+  }
+
+  console.log(`Days difference: ${getDaysBetweenDates('10/15/2020', '12/1/2020')}`)
+```
+
